@@ -22,7 +22,7 @@ echo ' <user username="admin" password="admin" roles="manager-gui, manager-scrip
 echo '</tomcat-users>' >> /usr/share/tomcat/conf/tomcat-users.xml
 
 # Solr install
-RUN wget http://ftp.meisei-u.ac.jp/mirror/apache/dist/lucene/solr/4.10.2/solr-4.10.2.tgz \
+RUN wget https://archive.apache.org/dist/lucene/solr/4.10.2/solr-4.10.2.tgz \
 	&& tar -zxvf solr-*.tgz \
 	&& rm -f solr-*.tgz
 RUN cp solr-4.10.2/dist/solr-4.10.2.war /usr/share/tomcat/webapps/ \
